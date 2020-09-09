@@ -40,11 +40,11 @@ RUN apt update -y && \
     gnupg && \
   apt clean
 
-RUN apt-get install software-properties-common
-RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
-RUN add-apt-repository 'deb [arch=amd64,i386,ppc64el] https://mirrors.piconets.webwerks.in/mariadb-mirror/repo/10.5/debian buster main'
+# RUN apt-get install software-properties-common
+# RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+# RUN add-apt-repository 'deb [arch=amd64,i386,ppc64el] https://mirrors.piconets.webwerks.in/mariadb-mirror/repo/10.5/debian buster main'
 
-RUN apt-get install php5-common libapache2-mod-php5 php5-cli
+# RUN apt-get install php5-common libapache2-mod-php5 php5-cli
 
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get install -y nodejs
