@@ -1,10 +1,10 @@
-name: Debian Latest Image
+name: Debian Jessie Image
 
 on:
   push:
-    branches: [ master ]
+    branches: [ jessie ]
   pull_request:
-    branches: [ master ]
+    branches: [ jessie ]
 
 jobs:
 
@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dftechs_debian:$(date +%s)
+      run: docker build . --file Dockerfile --tag dftechs_debian_jessie:$(date +%s)
