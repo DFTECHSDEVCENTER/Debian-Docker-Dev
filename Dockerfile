@@ -31,7 +31,7 @@ RUN apt update -y && \
     jq \
     git \
     python3 \
-    python2 \
+    python \
     gcc \
     g++ \
     make \
