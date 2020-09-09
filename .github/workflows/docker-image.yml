@@ -2,9 +2,9 @@ name: Debian bullseye Image
 
 on:
   push:
-    branches: [ master ]
+    branches: [ bullseye ]
   pull_request:
-    branches: [ master ]
+    branches: [ bullseye ]
 
 jobs:
 
