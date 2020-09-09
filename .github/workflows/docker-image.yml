@@ -1,4 +1,4 @@
-name: Debian Latest Image
+name: Debian bullseye Image
 
 on:
   push:
@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dftechs_debian:$(date +%s)
+      run: docker build . --file Dockerfile --tag dftechs_debian_bullseye:$(date +%s)
