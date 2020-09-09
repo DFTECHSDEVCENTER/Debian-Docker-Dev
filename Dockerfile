@@ -42,8 +42,7 @@ RUN apt-get install software-properties-common -y
 RUN apt-key adv --fetch-keys 'http://mariadb.org/mariadb_release_signing_key.asc' -y
 RUN add-apt-repository 'deb [arch=amd64,i386,ppc64el] https://mirrors.piconets.webwerks.in/mariadb-mirror/repo/10.5/debian jessie main' -y
 
-RUN apt-get update –fix-missing
-RUN dpkg –configure -a
+## RUN dpkg –configure -a
 
 RUN apt-get update -y
 RUN apt-get install mariadb-server -y --force-yes
