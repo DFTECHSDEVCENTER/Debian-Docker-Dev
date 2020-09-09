@@ -1,10 +1,10 @@
-name: Debian Latest Image
+name: Debian experimental Image
 
 on:
   push:
-    branches: [ master ]
+    branches: [ experimental ]
   pull_request:
-    branches: [ master ]
+    branches: [ experimental ]
 
 jobs:
 
@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dftechs_debian:$(date +%s)
+      run: docker build . --file Dockerfile --tag dftechs_debian_experimental:$(date +%s)
