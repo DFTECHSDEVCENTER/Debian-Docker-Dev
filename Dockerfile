@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:jessie
 RUN apt update && apt upgrade -y && apt install tzdata
 
 RUN echo "Asia/Kolkata" | tee /etc/timezone
