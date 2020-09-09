@@ -31,15 +31,24 @@ RUN apt update -y && \
     jq \
     git \
     python3 \
-    python \
+    python2 \
     gcc \
     g++ \
     make \
-    php \ 
+    apache2 \
     gnupg && \
-  apt clean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  apt clean
 
+RUN apt-get install software-properties-common
+RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc'
+RUN add-apt-repository 'deb [arch=amd64,i386,ppc64el] https://mirrors.piconets.webwerks.in/mariadb-mirror/repo/10.5/debian jessie main'
+
+RUN apt-get install php5-common libapache2-mod-php5 php5-cli
+
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get install -y nodejs
+
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
 EXPOSE 8080
