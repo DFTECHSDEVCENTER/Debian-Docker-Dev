@@ -46,8 +46,10 @@ RUN apt-get install software-properties-common -y
 
 # RUN apt-get install php5-common libapache2-mod-php5 php5-cli
 
-RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
-RUN apt-get install -y nodejs
+# RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
+# RUN apt-get install -y nodejs
+
+RUN apt install Nodejs npm -y
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
