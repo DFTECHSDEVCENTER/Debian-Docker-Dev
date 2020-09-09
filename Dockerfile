@@ -49,7 +49,7 @@ RUN apt-get install software-properties-common -y
 # RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 # RUN apt-get install -y nodejs
 
-RUN apt install Nodejs npm -y
+RUN apt install nodejs npm -y
 
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
