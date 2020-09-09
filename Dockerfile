@@ -37,7 +37,7 @@ RUN apt update -y && \
     make \
     apache2 \
     gnupg && \
-  apt clean -y
+  apt clean 
 
 RUN apt-get install software-properties-common -y
 RUN apt-key adv --fetch-keys 'https://mariadb.org/mariadb_release_signing_key.asc' -y
